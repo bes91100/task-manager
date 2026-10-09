@@ -28,7 +28,7 @@ def setup_db():
 
 def test_create_user():
     r = client.post("/api/users", json={"username": "john", "email": "john@example.com"})
-    assert r.status_code == 999
+    assert r.status_code == 200
     assert r.json()["username"] == "john"
 
 def test_get_user():
